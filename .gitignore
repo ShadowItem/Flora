@@ -1,0 +1,9 @@
+target/
+dist/
+out/
+build/
+.idea/
+*.iml
+*.log
+~$*.docx
+.gitignore.txt

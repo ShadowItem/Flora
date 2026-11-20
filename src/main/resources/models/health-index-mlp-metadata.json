@@ -1,0 +1,97 @@
+{
+  "model": "Health_Index MLP regressor",
+  "target": "original Health_Index from the supplied expert data; labels not regenerated",
+  "features": [
+    "Weight_kg",
+    "Temp_In_C",
+    "Humidity_In_P",
+    "CO2_ppm",
+    "Ext_Temp_C",
+    "Pesticide_Risk",
+    "MonthSin",
+    "MonthCos",
+    "HourSin",
+    "HourCos",
+    "WeightChangePerHour",
+    "TempChangePerHour",
+    "HumidityChangePerHour",
+    "CO2ChangePerHour",
+    "HasPreviousReading"
+  ],
+  "train_rows": 2000,
+  "train_hives": 100,
+  "train_date_min": "2026-06-01",
+  "train_date_max": "2026-07-14",
+  "validation_rows": 400,
+  "validation_date_min": "2026-07-25",
+  "validation_date_max": "2026-08-03",
+  "internal_train_group_holdout_hives": 20,
+  "selected_epoch_using_train_only_holdout": 400,
+  "validation_used_for_tuning": false,
+  "train_feature_ranges": {
+    "Weight_kg": {
+      "min": 20.899999618530273,
+      "max": 54.5
+    },
+    "Temp_In_C": {
+      "min": 31.299999237060547,
+      "max": 42.29999923706055
+    },
+    "Humidity_In_P": {
+      "min": 32.0,
+      "max": 99.0
+    },
+    "CO2_ppm": {
+      "min": 380.0,
+      "max": 1960.0
+    },
+    "Ext_Temp_C": {
+      "min": 8.0,
+      "max": 34.0
+    },
+    "Pesticide_Risk": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "MonthSin": {
+      "min": 1.2246468525851679e-16,
+      "max": 0.5
+    },
+    "MonthCos": {
+      "min": -1.0,
+      "max": -0.8660253882408142
+    },
+    "HourSin": {
+      "min": -1.0,
+      "max": 0.8660253882408142
+    },
+    "HourCos": {
+      "min": -1.0,
+      "max": 0.5
+    },
+    "WeightChangePerHour": {
+      "min": -0.30000001192092896,
+      "max": 0.44999998807907104
+    },
+    "TempChangePerHour": {
+      "min": -0.8999999761581421,
+      "max": 1.0
+    },
+    "HumidityChangePerHour": {
+      "min": -4.0,
+      "max": 3.5
+    },
+    "CO2ChangePerHour": {
+      "min": -55.0,
+      "max": 70.0
+    },
+    "HasPreviousReading": {
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "scope_note": "Only dates/periods represented in Train or present in the separate, post-training Validation are empirically represented. This does not establish year-round field validity.",
+  "weather_index_note": "WeatherIndex is calculated separately and is never used as Health_Index or as its label.",
+  "validation_mae": 0.400030657351017,
+  "validation_rmse": 0.726038348513368
+}
